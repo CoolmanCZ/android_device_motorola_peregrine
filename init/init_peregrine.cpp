@@ -62,50 +62,17 @@ void vendor_load_properties()
 {
     std::string radio = GetProperty("ro.boot.radio", "");
 
-    property_override_dual("ro.product.model", "ro.vendor.product.model", "Moto G 2014");
+    property_override_dual("ro.product.model", "ro.vendor.product.model", "Moto G 2013 LTE");
 
-    if (radio == "0x1") {
-        /* XT1063 */
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "peregrine_umts");
-        property_override("ro.build.description", "peregrine_retuglb-user 6.0 MPB24.65-34 31 release-keys");
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "motorola/peregrine_retuglb/peregrine_umts:6.0/MPB24.65-34/31:user/release-keys");
-        property_override("ro.build.product", "peregrine_umts");
-        property_set("ro.mot.build.customerid", "retusa_glb");
+    if (radio == "0x3") {
+        /* XT1039 */
+        property_override_dual("ro.product.device", "ro.vendor.product.device", "peregrine");
+        property_override("ro.build.description", "peregrine_reteu-user 5.1 LPB23.13-17 18 release-keys");
+        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "motorola/peregrine_reteu/peregrine:5.1/LPB23.13-17/18:user/release-keys");
+        property_override("ro.build.product", "peregrine");
+        property_set("ro.mot.build.customerid", "reteu");
         property_set("ro.telephony.default_network", "0");
         property_set("persist.radio.multisim.config", "");
-    } else if (radio == "0x5") {
-        /*XT1068 */
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "peregrine_umtsds");
-        property_override("ro.build.description", "peregrine_retaildsds-user 6.0 MPB24.65-34 31 release-keys");
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "motorola/peregrine_retaildsds/peregrine_umtsds:6.0/MPB24.65-34/31:user/release-keys");
-        property_override("ro.build.product", "peregrine_umtsds");
-        property_set("ro.mot.build.customerid", "retaildsdsall");
-        property_set("ro.telephony.default_network", "0,1");
-        property_set("ro.telephony.ril.config", "simactivation,sim2gsmonly");
-        property_set("persist.radio.multisim.config", "dsds");
-        property_set("persist.radio.dont_use_dsd", "true");
-        property_set("persist.radio.plmn_name_cmp", "1");
-    } else if (radio == "0x6") {
-        /* XT1064 */
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "peregrine_umts");
-        property_override("ro.build.description", "peregrine_retuaws-user 6.0 MPB24.65-34 31 release-keys");
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "motorola/peregrine_retuaws/peregrine_umts:6.0/MPB24.65-34/31:user/release-keys");
-        property_override("ro.build.product", "peregrine_umts");
-        property_set("ro.mot.build.customerid", "retusa_aws");
-        property_set("ro.telephony.default_network", "0");
-        property_set("persist.radio.multisim.config", "");
-    } else if (radio == "0x7") {
-        /* XT1069 */
-        property_override_dual("ro.product.device", "ro.vendor.product.device", "peregrine_udstv");
-        property_override("ro.build.description", "peregrine_retbr_dstv-user 6.0 MPB24.65-34 31 release-keys");
-        property_override_dual("ro.build.fingerprint", "ro.vendor.build.fingerprint", "motorola/peregrine_retbr_dstv/peregrine_udstv:6.0/MPB24.65-34/31:user/release-keys");
-        property_override("ro.build.product", "peregrine_udstv");
-        property_set("ro.mot.build.customerid", "retbr");
-        property_set("ro.telephony.default_network", "0,1");
-        property_set("ro.telephony.ril.config", "simactivation,sim2gsmonly");
-        property_set("persist.radio.multisim.config", "dsds");
-        property_set("persist.radio.dont_use_dsd", "true");
-        property_set("persist.radio.plmn_name_cmp", "1");
     }
 
     // Init a dummy BT MAC address, will be overwritten later
