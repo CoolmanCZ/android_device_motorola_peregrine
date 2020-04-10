@@ -17,13 +17,13 @@
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit from titan device
-$(call inherit-product, device/motorola/titan/device.mk)
+# Inherit from peregrine device
+$(call inherit-product, device/motorola/peregrine/device.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := titan
-PRODUCT_NAME := full_titan
+PRODUCT_DEVICE := peregrine
+PRODUCT_NAME := full_peregrine
 PRODUCT_BRAND := motorola
-PRODUCT_MODEL := titan
+PRODUCT_MODEL := peregrine
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_SHIPPING_API_LEVEL := 19

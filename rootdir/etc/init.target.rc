@@ -27,11 +27,11 @@
 #
 
 on post-fs-data
-    # Create directory for titan sensors
+    # Create directory for peregrine sensors
     mkdir /data/misc/sensor 0775 input input
 
 on boot
-    # titan/thea  sensors
+    # peregrine/thea  sensors
     chown root input /sys/class/sig_sensor/g_sensor/en_sig_motion
     chown root input /sys/class/srot_sensor/g_sensor/en_disp_rotation
 

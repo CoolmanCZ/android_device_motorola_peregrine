@@ -16,20 +16,20 @@
 # inherit from common msm8226-common
 -include device/motorola/msm8226-common/BoardConfigCommon.mk
 
-DEVICE_PATH := device/motorola/titan
+DEVICE_PATH := device/motorola/peregrine
 
 # Vendor Unification Init
-TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_titan
-TARGET_RECOVERY_DEVICE_MODULES := libinit_titan
+TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_peregrine
+TARGET_RECOVERY_DEVICE_MODULES := libinit_peregrine
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := titan,titan_umts,titan_udstv,titan_umtsds,titan_retaildsds,XT1068,XT1064,XT1063,XT1069
+TARGET_OTA_ASSERT_DEVICE := peregrine,peregrine_umts,peregrine_udstv,peregrine_umtsds,peregrine_retaildsds,XT1068,XT1064,XT1063,XT1069
 
 # Board
 TARGET_BOARD_INFO_FILE := $(DEVICE_PATH)/board-info.txt
 
 # Kernel
-TARGET_KERNEL_CONFIG := titan_defconfig
+TARGET_KERNEL_CONFIG := peregrine_defconfig
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 10444800
@@ -42,4 +42,4 @@ BOARD_CACHEIMAGE_PARTITION_SIZE := 560070656
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # inherit from the proprietary version
--include vendor/motorola/titan/BoardConfigVendor.mk
+-include vendor/motorola/peregrine/BoardConfigVendor.mk

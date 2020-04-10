@@ -19,7 +19,7 @@
 set -e
 
 # Required!
-export DEVICE=titan
+export DEVICE=peregrine
 export DEVICE_COMMON=msm8226-common
 export VENDOR=motorola
 

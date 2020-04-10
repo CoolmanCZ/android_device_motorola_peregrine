@@ -15,13 +15,13 @@
 #
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/motorola/titan/titan-vendor.mk)
+$(call inherit-product-if-exists, vendor/motorola/peregrine/peregrine-vendor.mk)
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Soong namespaces
-PRODUCT_SOONG_NAMESPACES += device/motorola/titan
+PRODUCT_SOONG_NAMESPACES += device/motorola/peregrine
 
 # Audio configuration
 PRODUCT_COPY_FILES += \
